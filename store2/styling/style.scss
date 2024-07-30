@@ -1,0 +1,419 @@
+@charset "UTF-8";
+$main-color: #333;
+$border-color :#dcdbdb;
+$menu-text-color : #fff;
+
+/** breakpointを定義　**/
+$breakpoints: (
+    "md": "screen and (max-width: 900px)",
+
+    ) !default;
+
+/** media queryを定義 */
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
+/*--- Defalut Styling ----*/
+// *,
+// *::before,
+// *::after {
+//     box-sizing: border-box;
+// }
+html {
+    font-size: 100%;
+}
+
+
+body {
+    font-size: 0.875rem;
+    color: $main-color;
+    min-height: 100vh;
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $main-color;
+    transition: all 0.5s;
+
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+// p,
+// ul,
+// dd {
+//     margin: 0;
+//     padding: 0;
+// }
+
+.page-title {
+
+    margin-bottom: 30px;
+    font-size: 0.875rem;
+    font-weight: normal;
+
+}
+.wrapper {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.content {
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+/*---------------------------**/
+/*---- header          --------*/
+/*---------------------------**/
+#header {
+    Width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    flex-shrink: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #fff;
+
+}
+
+.site-title a {
+    width: 180px;
+    display: block;
+}
+
+
+/*---------------------------**/
+/*---- hamburger menu --------*/
+/*---------------------------**/
+.toggle-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+
+    /* ハンバーガーメニューの線の設定　*/
+    span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $main-color;
+        position: absolute;
+        border-radius: 5px;
+        transition: all 0.5s;
+
+
+        &:nth-child(1) {
+            /*1本目 */
+            top: 10px;
+        }
+
+        &:nth-child(2) {
+            /*２本目 */
+            bottom: 10px;
+        }
+    }
+
+    /*-------------------------------------------
+    toggle-btnクラスにopenクラスが付与されたら、二→×に変化するようにする
+    -------------------------------------------*/
+    &.open span {
+        background-color: $menu-text-color;
+        z-index: 30;
+
+    }
+
+    /* 1本目の線を-45度回転 */
+    &.open span:nth-child(1) {
+        transform: translateY(4px) rotate(-45deg
+        );
+}
+
+/* 2本目の線を45度回転 */
+&.open span:nth-child(2) {
+    transform: translateY(-4px) rotate(45deg);
+}
+}
+
+#nav {
+    position: fixed;
+    width: 300px;
+
+    top: 0;
+    left: -300px;
+    z-index: 20;
+    opacity: 0;
+    text-align-last: left;
+    padding: 36px 50px;
+    visibility: hidden;
+    transition: all 0.6s;
+
+    & a {
+        color: $menu-text-color;
+    }
+
+    & li {
+        margin-bottom: 14px;
+    }
+
+    &.open {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+
+}
+
+/* 閉じている時 */
+#mask {
+    transition: all 0.5s;
+    display: none;
+
+    &.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $main-color;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.8;
+        z-index: 10;
+    }
+}
+
+/*---------------------------**/
+/*---- top page       --------*/
+/*---------------------------**/
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 42px 35px;
+    margin-bottom: 40px;
+
+    @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+        margin-bottom: 60px;
+    }
+
+
+    & img {
+        margin-bottom: 10px;
+        vertical-align: top;
+    }
+
+    & a p {
+        font-size: 0.75rem;
+    }
+
+}
+
+.pagenation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & li {
+
+        padding: 0 20px;
+    }
+}
+
+.link-text {
+    display: block;
+    text-align: center;
+}
+
+//*---------------------------**/
+/*---- footer          --------*/
+/*---------------------------**/
+
+#footer {
+    // margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 20px;
+
+    @include mq(md) {
+        flex-directionc:column;
+
+    }
+
+
+}
+
+.footer-menu {
+    display: flex;
+    gap: 30px;
+    justify-content: right;
+    margin-bottom: 5px;
+
+
+}
+
+/*  products page   */
+
+
+/*  item page   */
+.item {
+    min-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    margin-bottom: 60px;
+    @include mq(md) {
+        flex-direction: column;
+
+    }
+
+    .item-img {
+        width: 50%;
+
+        @include mq(md) {
+            max-width: 100%;
+            margin-bottom: 30px;
+
+        }
+
+    }
+
+    .item-detail {
+
+        width: 50%;
+        @include mq(md) {
+            max-width: 100%;
+
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+
+
+
+
+            dt {
+                width: 30%;
+
+            }
+
+            dd {
+                width: 70%;
+            }
+
+        }
+
+    }
+
+    
+
+}
+
+.about{
+    max-width: 600px;
+    text-align: left;
+
+    p {
+        text-align: justify;
+        margin-bottom: 30px;
+
+    }
+}
+
+// company
+.company {
+    max-width: 600px;
+
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        @include mq(md) {
+            flex-direction: column;
+    
+        }
+
+    
+        dt,dd {
+            padding: 20px 0 20px 10px;
+            border-bottom: 1px solid $border-color;
+            
+        }
+        dt:last-of-type,
+        dd:last-of-type {
+            border-bottom: none;
+        }
+
+        dt {
+               width: 30%;
+        }
+        dd {
+
+            width: 70%;
+        }
+
+        @include mq(md) {
+
+            dt {
+                border-bottom: none;
+                padding-bottom: 5px;
+                width: 100%;
+
+            }
+
+            dd{
+                padding-top: 5px;
+                width: 100%;
+
+            }
+
+
+        }
+
+
+    }
+
+
+    .company-map{
+        margin-top: 10px;
+        filter:grayscale(100%);
+        height: 300px;
+        width: 100%;
+    
+    }   
+
+}
+

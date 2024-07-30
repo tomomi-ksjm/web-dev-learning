@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="styling/style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <h1 class="site-title">
+            <a href="#"><img src="img/logo.svg" alt="logo"></a>
+        </h1>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="#pickup">PICK UP</a></li>
+                <li><a href="#feature">FEATURE</a></li>
+                <li><a href="#contact"></a>CONTACT</li>
+
+            </ul>
+            <ul class="nav-sns">
+                <li><a href="https://www.x.com">x</a></li>
+                <li><a href="https://www.facebook.com">facebook</a></li>
+                <li><a href="https://www.instagram.com">instagram</a></li>
+            </ul>
+        </nav>
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+        <div id="mask"></div>
+    </header>
+    <main id="main">
+        <div class="video">
+            <video src="video/video.mp4" class="movie" muted autoplay loop playsinline></video>
+
+
+        </div>
+
+        <section id="pickup">
+            <h2 class="section-title">PICK UP</h2>
+            <!-- <ul class="pickup-list">
+                <li class="pickup-item">
+                    <img src="img/pickup1.jpg" alt="pickup1">
+
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup2.jpg" alt="pickup2">
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup3.jpg" alt="pickup3">
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup4.jpg" alt="pickup4">
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup5.jpg" alt="pickup5">
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup6.jpg" alt="pickup6">
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup7.jpg" alt="pickup7">
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup8.jpg" alt="pickup8">
+                </li>
+                <li class="pickup-item">
+                    <img src="img/pickup9.jpg" alt="pickup9">
+                </li>
+            </ul> -->
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="img/pickup1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup2.jpg" alt="">    
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup5.jpg" alt="">    
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup6.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup7.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup8.jpg" alt="">    
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/pickup9.jpg" alt="">
+                    </div>
+
+                    
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-button-next"></div> -->
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+
+
+        </section>
+
+        <section id="feature" class="wrapper">
+            <h2 class="section-title">FEATURE</h2>
+            <div class="feature-grid">
+                <div class="item">
+                    <div class="fadein">
+                    <img src="img/feature1.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">バスケット</p>
+                        <p class="item-text">快適な履き心地とスタイリッシュなデザインが魅力の新製品が出ました</p>
+                        <p class="item-date">2024.7.12</p>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature2.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">コートタイプ</p>
+                        <p class="item-text">軽量で通気性抜群のオールシーズン対応シューズで夏も快適に過ごしましょう</p>
+                        <p class="item-date">2024.7.3</p>
+                    </div>
+                </div>
+
+                </div>
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature3.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">スケートボード</p>
+                        <p class="item-text">鮮やかなグリーンとモダンなデザインで足元をおしゃれに演出します</p>
+                        <p class="item-date">2024.6.15</p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature4.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">ウォーキング</p>
+                        <p class="item-text">衝撃吸収ソールでどんなに長く歩いても足が痛くなりません</p>
+                        <p class="item-date">2024.6.5</p>
+                    </div>
+                </div>
+
+                </div>
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature5.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">アウトドア</p>
+                        <p class="item-text">アウトドア大好きなあなたのアクティブなライフスタイルにぴったりのスニーカー</p>
+                        <p class="item-date">2024.5.15</p>
+                    </div>
+                </div>
+
+                </div>
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature6.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">防水タイプ</p>
+                        <p class="item-text">耐久性の高い素材を使用し、どんな悪条件にも耐えられる長持ちするスニーカー</p>
+                        <p class="item-date">2024.4.4</p>
+                    </div>
+                </div>
+
+                </div>
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature7.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">ランニング</p>
+                        <p class="item-text">スポーツにもお出かけにも普段使いにもどんなシーンにもぴったりな万能な一足</p>
+                        <p class="item-date">2024.3.3</p>
+                    </div>
+                </div>
+
+                </div>
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature8.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">バスケット</p>
+                        <p class="item-text">綺麗な白とシンプルなデザインでどんなスタイルにもマッチする一足</p>
+                        <p class="item-date">2023.12.24</p>
+                    </div>
+                </div>
+
+
+                </div>
+                <div class="item">
+                    <div class="fadein">
+
+                    <img src="img/feature9.jpg" alt="">
+                    <div class="item-content">
+                        <p class="item-category">ランニング</p>
+                        <p class="item-text">カジュアルからフォーマルまで合わせやすいデザイン</p>
+                        <p class="item-date">2023.11.23</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" >
+        
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-content wrapper">
+                <div class="company-info">
+                    <p>お問い合わせについて</p>
+                    <p>当サイトに関するご感想、商品の仕様に関するご質問や取扱い店のお問い合せなど、気軽にお寄せください。ご氏名、メールアドレス、メッセージを書いて、SENDボタンを押してください。</p>
+                    <P>弊社ではE-mailのお問い合わせに関しまして、基本的に翌々営業日までに回答させていただいております。ただし返信する際にまれに原因不明のエラーが発生し、返信されないことがございます。1週間以上たっても弊社からの返答がない場合、恐れ入りますが、ご連絡先・お電話番号をお書き添えの上、再送信いただきますよう、よろしくお願い申しあげます。</P>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#">
+                        <dl class="contact-list">
+                            <dt><label for="name">Name:</label></dt>
+                            <dd><input id="name" type="text"></dd>
+                            <dt><label for="email">Mail:</label></dt>
+                            <dd><input id="email" type="email"></dd>
+                            <dt><label for="message">Message:</label></dt>
+                            <dd><textarea id="message" name="customer-message"></textarea></dd>
+
+                        </dl>
+                        <a href="#" class="send-btn">SEND</a>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <p class="copyright">&copy; Sneakers</p>
+    </footer>
+</body>
+
+</html>

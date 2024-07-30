@@ -1,0 +1,319 @@
+@charset "UTF-8";
+/** breakpointを定義　**/
+/** media queryを定義 */
+/*--- Defalut Styling ----*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 0.875rem;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.5s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.page-title {
+  margin-bottom: 30px;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.content {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+/*---------------------------**/
+/*---- header          --------*/
+/*---------------------------**/
+#header {
+  Width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  flex-shrink: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.site-title a {
+  width: 180px;
+  display: block;
+}
+
+/*---------------------------**/
+/*---- hamburger menu --------*/
+/*---------------------------**/
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  /* ハンバーガーメニューの線の設定　*/
+  /*-------------------------------------------
+  toggle-btnクラスにopenクラスが付与されたら、二→×に変化するようにする
+  -------------------------------------------*/
+  /* 1本目の線を-45度回転 */
+  /* 2本目の線を45度回転 */
+}
+.toggle-btn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.toggle-btn span:nth-child(1) {
+  /*1本目 */
+  top: 10px;
+}
+.toggle-btn span:nth-child(2) {
+  /*２本目 */
+  bottom: 10px;
+}
+.toggle-btn.open span {
+  background-color: #fff;
+  z-index: 30;
+}
+.toggle-btn.open span:nth-child(1) {
+  transform: translateY(4px) rotate(-45deg);
+}
+.toggle-btn.open span:nth-child(2) {
+  transform: translateY(-4px) rotate(45deg);
+}
+
+#nav {
+  position: fixed;
+  width: 300px;
+  top: 0;
+  left: -300px;
+  z-index: 20;
+  opacity: 0;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  padding: 36px 50px;
+  visibility: hidden;
+  transition: all 0.6s;
+}
+#nav a {
+  color: #fff;
+}
+#nav li {
+  margin-bottom: 14px;
+}
+#nav.open {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 閉じている時 */
+#mask {
+  transition: all 0.5s;
+  display: none;
+}
+#mask.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+/*---------------------------**/
+/*---- top page       --------*/
+/*---------------------------**/
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 42px 35px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 900px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    margin-bottom: 60px;
+  }
+}
+.product-list img {
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+.product-list a p {
+  font-size: 0.75rem;
+}
+
+.pagenation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.pagenation li {
+  padding: 0 20px;
+}
+
+.link-text {
+  display: block;
+  text-align: center;
+}
+
+/*---- footer          --------*/
+/*---------------------------**/
+#footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 20px;
+}
+@media screen and (max-width: 900px) {
+  #footer {
+    flex-directionc: column;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  gap: 30px;
+  justify-content: right;
+  margin-bottom: 5px;
+}
+
+/*  products page   */
+/*  item page   */
+.item {
+  min-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 900px) {
+  .item {
+    flex-direction: column;
+  }
+}
+.item .item-img {
+  width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .item .item-img {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.item .item-detail {
+  width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .item .item-detail {
+    max-width: 100%;
+  }
+}
+.item .item-detail p {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+.item .item-detail .item-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.item .item-detail .item-list dt {
+  width: 30%;
+}
+.item .item-detail .item-list dd {
+  width: 70%;
+}
+
+.about {
+  max-width: 600px;
+  text-align: left;
+}
+.about p {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.company {
+  max-width: 600px;
+}
+.company .info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .company .info {
+    flex-direction: column;
+  }
+}
+.company .info dt, .company .info dd {
+  padding: 20px 0 20px 10px;
+  border-bottom: 1px solid #dcdbdb;
+}
+.company .info dt:last-of-type,
+.company .info dd:last-of-type {
+  border-bottom: none;
+}
+.company .info dt {
+  width: 30%;
+}
+.company .info dd {
+  width: 70%;
+}
+@media screen and (max-width: 900px) {
+  .company .info dt {
+    border-bottom: none;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+  .company .info dd {
+    padding-top: 5px;
+    width: 100%;
+  }
+}
+.company .company-map {
+  margin-top: 10px;
+  filter: grayscale(100%);
+  height: 300px;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
