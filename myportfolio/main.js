@@ -11,6 +11,7 @@
 const hamburger = document.querySelector('.hamburger');
 const navi = document.querySelector('.nav');
 const hamburger_borders = document.querySelectorAll('.hamburger_border');
+const breaksize = 768;
 
 // hamburger menu　をクリックしたときの処理
 hamburger.addEventListener('click',function(){
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded',function(){
         // if分を用いて横幅に応じて関数を実行
         function handleResize() {
             const w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if (w > 720) {
+            if (w > breaksize) {
                 if (!mySwiper) {
                     initializeSwiper();
                 }

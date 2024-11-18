@@ -1,4 +1,4 @@
-@media screen and ( max-width: 720px) {
+@media screen and ( max-width: 768px) {
 
 
     .wrapper {
@@ -200,6 +200,7 @@
 /*-slideを縦並びにする-*/
 .swiper-wrapper {
     /* display: flex; */
+    transform: none;
     flex-direction: column;
     row-gap: 20px;
   }

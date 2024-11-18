@@ -233,7 +233,7 @@ img {
     display: flex;
     column-gap: 108px;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 
 }
 
