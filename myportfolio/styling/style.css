@@ -12,6 +12,7 @@
     --color-text-header: #0c1e5e;
     --color-text: #373f41;
 
+
 }
 
 *, *::before, *::after {
@@ -272,11 +273,11 @@ img {
 }
 
 .workcategory {
-    margin-top: 12px;
+    margin-top:8px;
     width: 132px;
     background-color: var(--color-main);
     padding: 4px 16px;
-    border-radius: 10%;
+    border-radius: 10px;
 
     p {
         font-size: 1rem;
@@ -380,9 +381,18 @@ img {
     font-size: 13px;
 
 }
+.works-card {
+    border-radius: 10px;
+    box-shadow: 1px 4px 4px rgb(252 220 20 / 50%);
+
+}
+.works-desc {
+    padding: 0px 8px 8px 8px ;
+}
 
 .works-arrow {
     text-align: right;
+    padding-right: 8px;
 
 
 }
