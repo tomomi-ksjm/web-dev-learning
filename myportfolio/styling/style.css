@@ -1,0 +1,444 @@
+@charset "utf-8";
+
+/*--- Defalut Styling ----*/
+/*               */
+/*  common
+/*               */
+
+:root{
+    --color-base: #fffefb;
+    --color-main: #fffbe2;
+    --color-accent: #fcdc14;
+    --color-text-header: #0c1e5e;
+    --color-text: #373f41;
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-text);
+    font-family: "Mulish","Noto Sans JP", sans-serif,serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+/*- linkにカーソルを合わせるとPOINTERに-*/
+a:any-link{
+    cursor: pointer;
+}
+.menulink:hover {
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+    /* width: 100%; */
+} 
+
+/*コンテンツ幅を設定するための共通クラス*/
+.wrapper {
+    max-width: 1056px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 4%;
+
+}
+.content {
+    
+}
+.button {
+    background-color: var(--color-accent);
+    display: inline-block;
+    border: none;
+    border-radius: 25px;
+}
+.section-title {
+    color: var(--color-text-header);
+    font-size: 2.5rem;
+    margin-top: 120px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+.content-text {
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+/* -- header ----*/
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: var(--color-main);
+    height: 80px;
+    margin: 0 auto;
+    
+}
+.header-inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* text-align: center; */
+
+}
+
+.title{
+    color: var(--color-accent);
+    font-size: 1.5em;
+
+}
+
+.nav_list{
+    display: flex;
+    column-gap: 32px;
+    align-items: center;
+    justify-content: space-between
+}
+
+    /* -- main visual ----*/
+#mainvisual {
+    height: 880px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 120px;
+}
+#mainvisual .text {
+    position: absolute;
+    top: 254px;
+    left: 50%;
+    transform:translateX(-50%);
+    z-index: 100;
+}
+#mainvisual img {
+    height: 800px;
+    width: 100%;
+    object-fit: cover;    
+}
+
+#mainvisual .fade li {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    /*最初は画像を非表示にしておく */
+    /* opacity:0; */
+    animation: fade 20s infinite;
+    
+}
+/* 
+1枚目の画像のアニメーション実行タイミングを設定
+「animation-delay: 0s;」ですぐに実行
+*/
+#mainvisual .fade li:nth-child(1) {
+    animation-delay: 0s;
+  }
+  /*
+  2枚目の画像のアニメーション実行タイミングを設定
+  「animation-delay: 5s;」で5秒後に実行
+  */
+ #mainvisual .fade li:nth-child(2) {
+    animation-delay: 5s;
+  }
+  /*
+  3枚目の画像のアニメーション実行タイミングを設定
+  「animation-delay: 10s;」で10秒後に実行
+  */
+#mainvisual .fade li:nth-child(3) {
+    animation-delay: 10s;
+  }
+#mainvisual .fade li:nth-child(4) {
+    animation-delay: 15s;
+  }
+
+
+.maintitle {
+    font-size: 4rem;
+    color: var(--color-base);
+    /* font-weight: bold; */
+    text-shadow: 0 4px 6px var(--color-text);
+    z-index: 200;
+
+}
+
+/*
+アニメーション処理
+上の「animation」で20sを指定しているので下記の処理を20秒かけて実行
+0%が0秒を表し、100%が20秒後を表す。
+
+0%の「opacity: 0;」で非表示の状態からスタートし、
+15%になるまでの間に少しづつ画像を表示（フェードイン）させる。
+そこから30%の時点までは画像を表示させたままの状態を維持し、
+45%の時点に向けて画像を非表示（フェードアウト）する。
+そこから100%まで非表示の状態を維持する。
+*/
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  } 
+
+/*-- about --*/
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10%;
+}
+.about-content img {
+    width: 288px;
+    height: 288px;
+    border-radius: 50%;
+}
+.about-text .content-text {
+    margin-bottom: 20px;
+}
+
+
+
+/*-- service --*/
+
+.service-list {
+    display: flex;
+    column-gap: 108px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.service-img {
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 52px auto;
+
+}
+.service-img-rectangle {
+    height: 120px;
+    width: 140px;
+}
+.service-img-round {
+    height: 120px;
+    width: 120px;
+}
+
+
+.service-title {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+/*-- works --*/
+
+/* .slide-media img { */
+.works-img {
+    height: 200px;
+    width: 304px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.workcategory {
+    margin-top: 12px;
+    width: 132px;
+    background-color: var(--color-main);
+    padding: 4px 16px;
+    border-radius: 10%;
+
+    p {
+        font-size: 1rem;
+        color: var(--color-text);
+        text-align: center;
+    }
+}
+.works-inner {
+    margin-bottom: 36px;
+}
+
+/** viewmore **/
+.workstext {
+    display: block;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: var(--color-accent) solid 2px;
+    width: 160px;
+    padding-bottom: 8px;
+
+}
+
+/**--swiper customise --**/
+/**--ボタンを外に出すために ボタンを囲っているdivを外に出して高さを定義--**/
+.swiper-controller {
+    position: relative;
+    margin-top: 20px;
+    height: 96px;
+}
+
+/**--ボタンの背景に色をつけて丸くする--**/
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: var(--color-main);
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+}
+/**--ボタンの位置を真ん中に寄せる**/
+.swiper-button-prev {
+    left: 35%;
+}
+.swiper-button-next {
+    right: 35%;
+}
+/**--ボタンの矢印の色を変えて大きさを小さくする**/
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: var(--color-text);
+    font-size: 1.5rem;
+
+}
+
+/*-- CONTACT --*/
+.contact-button {
+    display: block;
+    margin: 0 auto 180px auto;
+    text-align: center;
+    width: 320px;
+    height: 80px;
+    /* margin-bottom: 180px; */
+    padding: 28px 0;
+}
+
+
+/*-- footer --*/
+
+.footer {
+
+    background-color: var(--color-main);
+    height: 80px;
+
+
+}
+.footer-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
+}
+.footermenu {
+    display: flex;
+    column-gap: 32px;
+    align-items: center;
+    justify-content: space-between
+}
+.copyright {
+    font-size: 0.875rem;
+}
+
+/*- works page -*/
+.works-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    margin-bottom: 100px;
+
+} 
+.works-list-text {
+    font-size: 13px;
+
+}
+
+.works-arrow {
+    text-align: right;
+
+
+}
+.arrow{
+	position: relative;
+	display: inline-block;
+	padding: 0 0 0 16px;
+	color:var(--color-text-header);
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 15px;
+    /* text-align: right; */
+}
+.arrow::before,
+.arrow::after{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	content: "";
+	vertical-align: middle;
+}
+.arrow::before{
+	width: 24px;
+	height: 24px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background:var(--color-main);
+}
+.arrow::after{
+	left:10px;
+	box-sizing: border-box;
+	width: 5px;
+	height: 5px;
+	border: 5px solid transparent;
+	border-left: 5px solid var(--color-text-header);
+}
+.works-pagenation {
+    display: flex;
+    justify-content: center;
+    row-gap: 80px;
+
+
+}
+.works-pagenation li {
+    font-size: 32px;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    text-align: center;
+    margin: 0 32px;
+    padding-top: 12px;
+
+}
+.works-pagenation li:first-child{
+    opacity: 0.3;
+}

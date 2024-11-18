@@ -1,0 +1,256 @@
+@media screen and ( max-width: 720px) {
+
+
+    .wrapper {
+        max-width: 288px;    
+        padding: 0;
+    }
+    /* .button {
+        background-color: var(--color-accent);
+        display: inline-block;
+        border: none;
+        border-radius: 25px;
+    } */
+    .section-title {
+        font-size: 1.5rem;
+        margin-top: 72px;
+        margin-bottom: 36px;
+    }
+
+
+/* -- header ----*/
+.header{
+    height: 60px;
+}
+.header-inner {
+    padding: 20px 0;
+
+}
+.title{
+    font-size: 1rem;
+}
+.nav{
+    position: fixed;
+    right: -320px;    /* 右から出てくる */
+    top: 0;
+    width: 300px; /*スマホに収まるサイズ */
+    height: 100vh;
+    padding-top: 60px;
+    background-color: var(--color-main);
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+    opacity: 0.8;
+}
+/*-hamburger menuはmobileのみ-*/
+.hamburger {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    z-index: 300;
+    cursor: pointer;
+}
+.hamburger_border {
+    position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: all .6s;
+    display: inline-block;
+  }
+  .hamburger_border_top {
+    top: 14px;
+  }
+  .hamburger_border_center {
+    top: 20px;
+  }
+  .hamburger_border_bottom {
+    top: 26px;
+  }
+.nav_list{
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: end;
+    padding-top: 48px;
+    padding-right: 15px;
+    
+
+}
+.nav_item{
+    text-align: center;
+    padding: 0 14px;
+}
+.nav_item a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .nav_item a:hover {
+    background-color: #eee;
+  }
+  /* .yellow_bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: var(--color-main);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  } */
+
+  /* 表示された時用のCSS */
+  .nav-open.nav {
+    right: 0;
+    width: 100vw;
+  }
+  /* .nav-open .yellow_bg {
+    opacity: 0.8;
+    visibility: visible;
+  } */
+  .nav-open.hamburger_border_top {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav-open.hamburger_border_center {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open.hamburger_border_bottom {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+
+   /* -- main visual ----*/
+   #mainvisual {
+    height: 540px;
+    margin-bottom: 72px;
+    }
+    #mainvisual .text {
+        top: 160px;
+
+    }
+    #mainvisual img {
+        height: 480px;
+    }
+
+    #mainvisual .fade li {
+        top: 60px;
+        
+    }
+
+  .maintitle {
+    font-size: 1.5rem;
+  }
+
+    /*-- about --*/
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 44px;
+    }
+    .about-content img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+    }
+
+
+/*-- service --*/
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 42px;
+
+}
+
+.service-img {
+
+    margin: 0 auto 36px auto;
+
+}
+
+.service-title {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+}
+
+/*-- works --*/
+
+.slide-media{
+    width: 284px;
+}
+
+.slide-media img {
+    width: 284px;
+}
+
+/*-swiperの無効化-*/
+/*-slideを縦並びにする-*/
+.swiper-wrapper {
+    /* display: flex; */
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  /*ボタンの領域を上に詰めるため高さを０にする*/
+  .swiper-controller{
+    height: 0;
+  }
+  /*-ボタンを見えなくする-*/
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .works-inner {
+    margin-bottom: 24px;
+}
+
+/** viewmore **/
+.workstext {
+    font-size: 1.25rem;
+    border-bottom: var(--color-accent) solid 1.5px;
+    padding-bottom: 6px;
+
+}
+
+/**-contact-**/
+.contact-button {
+    width: 172px;
+    height: 56px;
+    padding: 16px 0;
+}
+.contact-icon {
+    display: none;
+}
+
+.footer {
+
+    height: 60px;    
+    padding: 20px 0;
+
+
+}
+.footer-inner {
+ justify-content: center;
+ align-items: center;
+
+}
+
+.footermenu {
+    display: none;
+}
+
+
+}
