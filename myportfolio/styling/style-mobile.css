@@ -254,4 +254,21 @@
 }
 
 
+/*- works page -*/
+.works-list {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px 20px;
+
+} 
+.works-pagenation {
+  row-gap: 30px;
+}
+.works-pagenation li {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  padding-top: 8px;
+
+}
+
 }

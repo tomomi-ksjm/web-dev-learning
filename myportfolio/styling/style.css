@@ -438,7 +438,7 @@ img {
 
 
 }
-.works-pagenation li {
+.works-pagenumber {
     font-size: 32px;
     width: 68px;
     height: 68px;
@@ -449,6 +449,6 @@ img {
     padding-top: 12px;
 
 }
-.works-pagenation li:first-child{
+.works-pagenumber-disable {
     opacity: 0.3;
 }
