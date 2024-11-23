@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Work Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- reset.css ress -->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+        <link rel="stylesheet" href="styling/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-inner wrapper">
+            <h1 class="header-title">
+                <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+            </h1>
+            <nav>
+                <ul class="header-ul">
+                    <li class="header-li"><a href="#about" >About</a></li>
+                    <li class="header-li"><a href="#works" >Works</a></li>
+                    <li class="header-li"><a href="#news" >News</a></li>
+                    <li class="header-li"><a href="#contact" >Contact</a></li>
+                    <li class="header-li"><a href="https://www.instagram.com/" ><img class="icon"
+                                src="img/icon-instagram.png" alt="インスタグラム"></a></li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="mainvisual">
+            <picture>
+                <source media="(max-width:600px)" srcset="img/mainvisual-sp.jpg">
+                <img src="img/mainvisual-pc.jpg" alt="mainvidual">
+
+            </picture>          
+
+        </div>
+        <section class="wrapper" id="about">
+            <h2 class="section-title">About</h2>
+            <ul class="about-ul">
+                <li class="about-li">Xxxxx Ashley</li>
+                <li class="about-li">2th Floor xxxxx Building x-x-x Nishiazabu, Minato-ku, Tokyo 106-0031 Japan</li>
+                <li class="about-li">tel: 000-0000-0000/li>
+                <li class="about-li">url: www.xxxxxx.jp</li>
+                <li class="about-li">mail: xxx@xxxxxx.jp</li>
+            </ul>
+            <p class="about-text">プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </section>
+        <section class="works wrapper" id="works">
+            <h2 class="section-title">Works</h2>
+            <ul class="works-ul">
+                <div class="works-content">
+                    <li class="works-li">
+                        <img src="img/works1.jpg" alt="works1">
+                    </li>
+                </div>
+                <div class="works-content">
+                    <li class="works-li">
+                        <img src="img/works2.jpg" alt="works1">
+                    </li>
+                </div>
+                <div class="works-content">
+                    <li class="works-li">
+                        <img src="img/works3.jpg" alt="works1">
+                    </li>
+                </div>
+                <div class="works-content">
+                    <li class="works-li">
+                        <img src="img/works4.jpg" alt="works1">
+                    </li>
+                </div>
+                <div class="works-content">
+                    <li class="works-li">
+                        <img src="img/works5.jpg" alt="works1">
+                    </li>
+                </div>
+                <div class="works-content">
+                    <li class="works-li">
+                        <img src="img/works6.jpg" alt="works1">
+                    </li>
+                </div>
+            </ul>
+
+        </section>
+        <section class="news wrapper" id="news">
+            <h2 class="section-title">News</h2>
+            <dl class="news-dl">
+                <div class="news-inner">
+                    <dt class="news-dt">2023.XX.XX</dt>
+                    <dd class="news-dd">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</dd>
+                </div>
+                <div class="news-inner">
+                    <dt class="news-dt">2020.XX.XX</dt>
+                    <dd class="news-dd">ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</dd>
+                </div>
+                <div class="news-inner">
+                    <dt class="news-dt">2019.XX.XX</dt>
+                    <dd class="news-dd">【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+                </div>
+                <div class="news-inner">
+                    <dt class="news-dt">2019.XX.XX</dt>
+                    <dd class="news-dd">デザイン雑誌「ＸＸＸＸＸＸ Vol.10』に掲載していただきました。</dd>
+                </div>
+                <div class="news-inner">
+                    <dt class="news-dt">2019.XX.XX</dt>
+                    <dd class="news-dd">【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+                </div>
+
+
+            </dl>
+
+        </section>
+        <section class="contact wrapper" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <form action="" method="post">
+                <dl class="contact-dl">
+                    <div class="contact-inner">
+                        <dt class="contact-dt">
+                            <label for="name">NAME</label>
+                        </dt>
+                        <dd class="contact-dd">
+                            <input type="text" name="name" id="name">
+                        </dd>
+                    </div>
+                    <div class="contact-inner">
+                        <dt class="contact-dt">
+                            <label for="email">E-mail</label>
+                        </dt>
+                        <dd class="contact-dd">
+                            <input type="email" name="email" id="email">
+                        </dd>
+                    </div>
+                    <div class="contact-inner">
+                        <dt class="contact-dt">
+                            <label for="message">MESSAGE</label>
+                        </dt>
+                        <dd class="contact-dd">
+                            <textarea name="message" id="message" ></textarea>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="button">
+                    <input type="submit" value="送信">
+                </div>
+            </form>
+
+        </section>
+        <footer class="footer">
+            <div class="footer-inner">
+            <p class="footer-text">&copy;2024 My Work</p>
+        </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

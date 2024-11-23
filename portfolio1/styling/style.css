@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/** breakpoingを定義　**/
+/** media queryを定義 */
+/** section間のmargin bottomを定義　*/
+/*--- Defalut Styling ----*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  color: #24292e;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #24294e;
+}
+
+/*--- Reusable Classes ---*/
+.wrapper {
+  max-width: 960px;
+  padding: 0 4%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .section-title {
+    margin-bottom: 65px;
+  }
+}
+
+/**------------------
+   header 
+--------------------*/
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .header-inner {
+    flex-direction: row;
+    height: 270px;
+  }
+}
+
+.header-title {
+  width: 120px;
+  line-height: 1px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 600px) {
+  .header-title {
+    margin-top: 0;
+  }
+}
+
+.header-ul {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+}
+.header-ul .header-li {
+  font-size: 0.9rem;
+}
+.header-ul .header-li:hover {
+  opacity: 0.7;
+}
+.header-ul .header-li .icon {
+  width: 20px;
+}
+
+/**------------------
+   main visual
+--------------------*/
+.mainvisual {
+  margin-bottom: 80px;
+}
+.mainvisual img {
+  width: 100%;
+  height: 420px;
+  max-width: 1920px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/**------------------
+   about
+--------------------*/
+#about {
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 600px) {
+  #about {
+    /* PC用 */
+    margin-bottom: 130px;
+  }
+}
+
+.about-ul {
+  margin-bottom: 30px;
+}
+
+.about-li {
+  font-size: 0.9rem;
+  text-align: left;
+}
+.about-li:first-child {
+  margin-bottom: 30px;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/**------------------
+   works
+--------------------*/
+#works {
+  margin-bottom: 90px;
+}
+@media screen and (min-width: 600px) {
+  #works {
+    /* PC用 */
+    margin-bottom: 150px;
+  }
+}
+
+.works-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 23px;
+}
+@media screen and (min-width: 600px) {
+  .works-ul {
+    /* PC用 */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .works-content {
+    width: 31%;
+  }
+}
+
+/**------------------
+   works
+--------------------*/
+.news-inner {
+  padding: 15px;
+  border-top: 1px solid #c8c8c8;
+  text-align: left;
+}
+.news-inner:last-child {
+  border-bottom: 1px solid #c8c8c8;
+}
+@media screen and (min-width: 600px) {
+  .news-inner {
+    display: flex;
+    gap: 80px;
+    justify-content: flex-start;
+  }
+}
+
+#news {
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 600px) {
+  #news {
+    /* PC用 */
+    margin-bottom: 130px;
+  }
+}
+
+/**------------------
+   contact
+--------------------*/
+#contact {
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 600px) {
+  #contact {
+    /* PC用 */
+    margin-bottom: 130px;
+  }
+}
+
+.contact-dl {
+  margin-bottom: 30px;
+}
+
+.contact-inner {
+  text-align: left;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .contact-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contact-dt {
+    width: 15%;
+  }
+}
+
+.contact-dd {
+  border: 1px solid #c8c8c8;
+}
+@media screen and (min-width: 600px) {
+  .contact-dd {
+    width: 85%;
+  }
+}
+
+.button input {
+  background-color: #24292e;
+  color: #fff;
+  width: 200px;
+  padding: 15px 0;
+  border: 1px solid #24292e;
+}
+.button input:hover {
+  background-color: #fff;
+  color: #24292e;
+}
+
+/**------------------
+   footer
+--------------------*/
+.footer-text {
+  padding: 10px 0;
+  font-size: 8px;
+  color: #fff;
+  background-color: #24292e;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
