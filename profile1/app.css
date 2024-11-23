@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/* 共通部分 */
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    color: #383E45;
+    font-size: 0.9rem;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+footer {
+    font-size: 0.5rem;
+    /* text-align: center; */
+    margin-top: 110px;
+}
+
+.section-header {
+    border-bottom: 1px solid #383E45;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    cursor: default;
+    margin: 80px auto;
+}
+
+.section-text-header {
+    font-size: 1rem;
+    cursor: default;
+    margin-bottom: 10px;
+}
+
+.section-text-detail {
+    display: block;
+    font-size: 14px;
+    cursor: default;
+    /* width: 403px; */
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.profile-logo {
+    display: block;
+
+}
+
+.site-header {
+    width: 120px;
+    line-height: 1px;
+    padding: 10px 0;
+}
+
+.profile-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-text {
+    /* font-size: 20px; */
+    text-align: center;
+    margin-right: 30px;
+    transition-duration: 0.3s;
+    color: #24292E;
+    cursor: pointer;
+}
+
+.nav-text:last-child {
+    margin-right: 0;
+}
+
+.nav-text:hover {
+    opacity: 0.7;
+
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+.main-vidual {
+    margin-bottom: 80px;
+
+
+}
+
+.main-vidual-img {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    padding: 0;
+    object-fit: cover;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.about-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+}
+
+.about-section-text {
+    text-align: left;
+}
+
+/*-------------------------------------------
+Bicycle
+-------------------------------------------*/
+.bicycle-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 16px;
+}
+
+.bicycle-content-detail {
+    width: 32%;
+
+}
+
+.bicycle-text-header {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+.footer {
+    cursor: default;
+    font-size: 0.5rem;
+    margin-top: 110px;
+    text-align: center;
+
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width:600px) {
+
+  /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+    .main-vidual-img {
+        height: calc(100vh - 60px);
+    }
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img {
+        margin-right: 0;
+    }
+
+  /*-------------------------------------------
+  Bicycle
+  -------------------------------------------*/
+    .bicycle-content {
+        flex-direction: column;
+    }
+
+    .bicycle-content-detail {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
