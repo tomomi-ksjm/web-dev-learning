@@ -500,9 +500,14 @@ img {
     margin-bottom: 8px;
 }
 .work-detail {
-    border-spacing: 92px 32px;
-    /* border: 1px solid black; */
-    /* border-collapse: collapse; */
+    border-spacing: 0px 32px;
+    table-layout: fixed;
+    width: 100%;
+    margin-left: 80px;
+
+}
+.work-detail td:first-of-type {
+    width: 120px;
 }
 .work-detail td {
     text-align: left;

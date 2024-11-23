@@ -299,7 +299,9 @@
 
 }
 .work-detail {
+  /* 表の項目間のスペースとmarginをリセット */
   border-spacing: 0;
+  margin-left: 0;
 }
 .work-detail td {
   width: 100%; 
@@ -314,9 +316,7 @@
   font-size: 0.9rem;
   margin-bottom: 16px;
 }
-/* .work-item {
-  margin-bottom: 4px;
-} */
+
 
 
 }
