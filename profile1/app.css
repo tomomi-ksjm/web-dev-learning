@@ -109,15 +109,15 @@ footer {
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
-.main-vidual {
+.main-visual {
     margin-bottom: 80px;
 
 
 }
 
-.main-vidual-img {
+.main-visual-img {
     width: 100%;
-    max-width: 1920px;
+    /* max-width: 1920px; */
     height: 600px;
     padding: 0;
     object-fit: cover;
