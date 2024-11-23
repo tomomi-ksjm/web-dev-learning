@@ -121,6 +121,7 @@ Mainvisual
     height: 600px;
     padding: 0;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 /*-------------------------------------------
