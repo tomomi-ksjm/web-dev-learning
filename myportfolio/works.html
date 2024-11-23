@@ -19,21 +19,21 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="#works">
         <div class="header-inner wrapper">
             <div class="logo">
-                <h1 class="title">TOMOMI.K</h1>
+                <h1 class="title"><a href="index.html">TOMOMI.K</a></h1>
             </div>
             <!-- ナビゲーション　-->
             <nav class="nav">
                 <ul class="nav_list">
-                    <li class="nav_item"><a href="#about" class="menulink">About</a></li>
-                    <li class="nav_item"><a href="#service" class="menulink">Service</a></li>
-                    <li class="nav_item"><a href="#works" class="menulink">Works</a></li>
-                    <li class="nav_item"><a href="#contact" class="menulink">Contact</a></li>
+                    <li class="nav_item"><a href="index.html#about" class="menulink">About</a></li>
+                    <li class="nav_item"><a href="index.html#service" class="menulink">Service</a></li>
+                    <li class="nav_item" id="target"><a href="#target" class="menulink">Works</a></li>
+                    <li class="nav_item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe2B6c2rKlwcHQAC5c2P_bHfUaAvpw_4oqDEA3yw6dNk_9NoQ/viewform" class="menulink">Contact</a></li>
                 </ul>
             </nav>
-        </div>
+        </div>ß
         <!-- ハンバーガーボタン　-->
         <div class="hamburger">
             <span class="hamburger_border hamburger_border_top"></span>
@@ -45,7 +45,7 @@
     </header>
     <main>
         <div class="content wrapper">
-            <h2 class="section-title">WORKS</h2>
+            <h2 class="page-title">WORKS</h2>
             <ul class="works-list">
                 <li class="works-card">
                     <img src="img/works1.jpg" alt="" class="works-img">
@@ -58,7 +58,7 @@
                             架空のプロフィールサイト
                         </p>
                         <div class="works-arrow">
-                            <a href="works_detail1.html" class="arrow"></a>
+                            <a href="works_detail1.html" class="arrow" target="_blank"></a>
                         </div>
                     </div>
 
@@ -142,7 +142,7 @@
             </ul>
             <ul class="works-pagenation">
                 <li class="works-pagenumber works-pagenumber-disable">1</li>
-                <li class="works-pagenumber"><a href="works2.html" target="_blank">2</a></li>
+                <li class="works-pagenumber"><a href="works2.html#target" target="_blank">2</a></li>
             </ul>
 
 
@@ -164,15 +164,17 @@
     <footer id="footer" class="footer">
         <div class="footer-inner wrapper">
             <ul class="footermenu">
-                <li><a href="#about" class="menulink">About</a></li>
-                <li><a href="#service" class="menulink">Service</a></li>
-                <li><a href="#works" class="menulink">Works</a></li>
-                <li><a href="#contact" class="menulink">Contact</a></li>
+                <li><a href="index.html#about" class="menulink">About</a></li>
+                <li><a href="index.html#service" class="menulink">Service</a></li>
+                <li><a href="#target" class="menulink">Works</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe2B6c2rKlwcHQAC5c2P_bHfUaAvpw_4oqDEA3yw6dNk_9NoQ/viewform" class="menulink">Contact</a></li>
             </ul>
             <p class="copyright">&copy; 2024 TomomiK.</p>
         </div>
 
     </footer>
+    <!-- JavaScriptの読み込み -->
+    <script src="main.js" defer></script>
 </body>
 
 </html>

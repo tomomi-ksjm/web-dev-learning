@@ -27,10 +27,10 @@
             <!-- ナビゲーション　-->
             <nav class="nav">
                 <ul class="nav_list">
-                    <li class="nav_item"><a href="#about" class="menulink">About</a></li>
-                    <li class="nav_item"><a href="#service" class="menulink">Service</a></li>
-                    <li class="nav_item"><a href="#works" class="menulink">Works</a></li>
-                    <li class="nav_item"><a href="#contact" class="menulink">Contact</a></li>
+                    <li class="nav_item"><a href="index.html#about" class="menulink">About</a></li>
+                    <li class="nav_item"><a href="index.html#service" class="menulink">Service</a></li>
+                    <li class="nav_item"><a href="works.html#target" class="menulink">Works</a></li>
+                    <li class="nav_item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe2B6c2rKlwcHQAC5c2P_bHfUaAvpw_4oqDEA3yw6dNk_9NoQ/viewform" class="menulink">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,18 +45,48 @@
     </header>
     <main>
         <div class="content wrapper">
-            <h2 class="section-title">WORKS</h2>
-            <article class="wrapper">ここに内容を書く
+            <h2 class="page-title">WORKS</h2>
+            <article class="wrapper">
+                <p class="category-text">Project</p>
+                <div class="work-top">
+                    <p class="work-title">架空のプロフィールサイト</p>
+                    <div class="workcategory">
+                        <p>Web制作</p>
+                    </div>
+                </div>
+                <div class="url-part">
+                    <span class="url-text">url</span>
+                    <span class="url-address"><a
+                            href="https://tomomi-ksjm.github.io/web-dev-learning/profile1/index.html"
+                            class=""  target="_blank">https://tomomi-ksjm.github.io/web-dev-learning/profile1/index.html ↗︎</a></span>
+                    <!-- <span class="url-arrow">↗︎</span> -->
+                </div>
+
+                <div class="work-visual">
+                    <img src="img/works1.jpg" alt="">
+                </div>
+
+                <table class="work-detail">
+                    <tr>
+                        <td class="work-detail-title">対象</td>
+                        <td class="work-detail-text">自転車好きな人に見てもらう</td>
+                    </tr>
+                    <tr>
+                        <td class="work-detail-title">目的</td>
+                        <td class="work-detail-text">自転車好きな個人が自分の自転車について紹介する</td>
+                    </tr>
+                    <tr>
+                        <td class="work-detail-title">デザイン</td>
+                        <td class="work-detail-text">1カラムのシンプルなデザインで自転車を素敵に見せることを重視</td>
+                    </tr>
+                    <tr>
+                        <td class="work-detail-title">制作期間</td>
+                        <td class="work-detail-text">３週間</td>
+                    </tr>
+                </table>
 
 
             </article>
-
-            <ul class="works-pagenation">
-                <li class="works-pagenumber"><a href="works.html" target="_blank">1</a></li>
-                <li class="works-pagenumber works-pagenumber-disable" >2</li>
-            </ul>
-
-
 
             <div id="contact" class="wrapper">
                 <h2 class="section-title">CONTACT</h2>
@@ -75,15 +105,18 @@
     <footer id="footer" class="footer">
         <div class="footer-inner wrapper">
             <ul class="footermenu">
-                <li><a href="#about" class="menulink">About</a></li>
-                <li><a href="#service" class="menulink">Service</a></li>
-                <li><a href="#works" class="menulink">Works</a></li>
-                <li><a href="#contact" class="menulink">Contact</a></li>
+                <li class="nav_item"><a href="index.html#about" class="menulink">About</a></li>
+                <li class="nav_item"><a href="index.html#service" class="menulink">Service</a></li>
+                <li class="nav_item"><a href="works.html#target" class="menulink">Works</a></li>
+                <li class="nav_item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe2B6c2rKlwcHQAC5c2P_bHfUaAvpw_4oqDEA3yw6dNk_9NoQ/viewform" class="menulink">Contact</a></li>
+
             </ul>
             <p class="copyright">&copy; 2024 TomomiK.</p>
         </div>
 
     </footer>
+    <!-- JavaScriptの読み込み -->
+    <script src="main.js" defer></script>
 </body>
 
 </html>
