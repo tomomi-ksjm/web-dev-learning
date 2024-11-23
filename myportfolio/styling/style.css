@@ -470,7 +470,7 @@ img {
     opacity: 0.3;
 }
 
-/*works detail page*/
+/*works detail page */
 .category-text {
     font-size: 0.75rem;
     color: var(--color-gray);
@@ -486,7 +486,6 @@ img {
     height: 100%;
     margin-bottom: 12px;
 }
-
 
 .url-part  {
     font-size: 0.75rem;
