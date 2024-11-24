@@ -1,0 +1,177 @@
+/* -----------------------------------
+ raptop Styling
+ ----------------------------------*/
+@media screen and (min-width: 900px) {
+    /*--- Reusable Classes ---*/
+
+    .section-title {
+        margin-bottom: 44px;
+    }
+
+    .jp-title {
+        margin-bottom: 36px;
+
+    }
+
+/* ---------
+  Header 
+-----------*/
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo-img {
+        width: 100px;
+    }
+
+    .header-inner{
+        padding: 31px 0 0 100px;
+        padding-left: 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        
+    }
+
+
+    .header-contact {
+        display: inline-block;
+        width: 200px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        font-size: 0.875rem;
+    }
+    
+/*--------------------
+ Main - mainvisual 
+ --------------------*/    
+ 
+ .main-visual img{
+    width: 100%;
+    height: calc(100vh-80px);
+    object-fit: cover;
+
+
+
+}
+/*------------- 
+Main - News 
+--------------*/
+.news-list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/*
+「width: calc(100%/3);」で横幅を3等分する
+*/
+.news-li {
+    width: calc(100%/3);
+    border-left: solid 1px #000;
+    padding-left: 20px;
+
+    margin-bottom: 130px;
+
+}
+.news-li:last-child{
+    margin-bottom: 130px;
+}
+.news-li:first-child{
+    padding-left: 0;
+    border-left: none;
+}
+/*------------- 
+Main - About 
+--------------*/
+.about-img{
+    width: 55%;
+    
+}
+.about-img img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.about-text-inner {
+    padding: 180px 5% 0 5%;
+}
+.about-inner{
+    display: flex;
+
+}
+/*---------------- 
+Main - Business 
+-----------------*/
+.business-content-all {
+    display: flex;
+    gap: 64px;
+}
+.business-content-1 {
+    padding-top: 100px;
+}
+.business-content:last-child{
+    padding-top: 50px;
+}
+.business-inner {
+    margin-bottom: 120px;
+}
+/*------------------
+Main - Company 
+--------------------*/
+.company-inner{
+    height: 750px;
+    display: flex;
+    position: relative;
+    align-items: center;
+
+}
+.company-content {
+    width: 55%;
+    position: absolute;
+    padding: 100px 8% 100px 6%;
+    top: 0;
+    left: 0;
+
+}
+.company-img{
+    width: 53%;
+    position: absolute;
+    top: 111px;
+    right:0;
+}
+.company-img img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.company-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.company-dt {
+    width: 20%;
+}
+.company-dd {
+    width: 80%;
+}
+.company-dd.multi{
+    margin-left: 20%;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.footer-content{
+    padding: 40px 0;
+}
+
+}

@@ -1,0 +1,175 @@
+/*--- Defalut Styling ----*/
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: #000;
+    background-color: #f0f0f0;
+}
+
+ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*--- Reusable Classes ---*/
+.container {
+    max-width: 1032px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    
+}
+.section-title{
+    font-weight: normal;
+}
+.en-title{
+    font-size: 36px;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 10.8px;
+
+
+}
+.jp-title{
+    font-size: 14px;
+    display: block;
+
+}
+
+/* 線　*/
+.section-title::after{
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+    display: block;
+
+}
+
+
+
+/* ---------
+  Header 
+-----------*/
+
+.header-inner {
+    height: 80px;
+}
+.header-ul{
+    display: flex;
+    gap: 30px;
+}
+
+
+/*  NEWS ABOUT など  */
+.header-li {
+   font-size: 0.875rem;
+
+
+}
+
+/*--------------------
+ Main - mainvisual 
+ --------------------*/
+.main-visual{
+    margin-bottom: 80px;
+}
+
+
+
+/*------------- 
+Main - News 
+--------------*/
+.news-date-area time {
+    font-size: 0.875rem;
+    margin-right: 16px;
+
+}
+.news-date-area span{
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: #000;
+    width: 50px;
+    text-align: center;
+}
+.news-date-area p {
+    font-size: 0.875rem;
+}
+
+/*------------- 
+Main - About 
+--------------*/
+
+.about-text {
+    line-height: 2.2;
+    font-size: 0.875rem;
+}
+
+
+/*---------------- 
+Main - Business 
+-----------------*/
+.business-title {
+    font-size: 0.875em;
+    position: relative;
+    /* background-color: thistle ; */
+    padding-left: 16px;
+    margin-bottom: 10px;
+
+
+
+}  
+/* 線を引く */
+.business-title::before{
+    position: absolute;
+    display: inline-block;
+    content: ""; 
+    width: 8px;
+    height: 1px;
+    background-color: #000;
+    top: 50%;
+    left: 0px;
+    padding-left: 0px; 
+
+}
+
+/*------------------
+Main - Company 
+--------------------*/
+.company-dt, .company-dd {
+    font-size: 0.875rem;
+}
+
+
+
+/* Footer */
+.footer-text {
+    font-size: 0.875rem;
+}
+.copyright {
+    font-size: 0.625rem;
+}
+
+.footer{
+    background-color: #fff;
+    padding-bottom: 20px;
+    
+}

@@ -1,0 +1,103 @@
+/* -------------
+   共通部
+　--------------- */
+html{
+    font-size: 100%;
+}
+
+body {
+
+    color: #000;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+
+}
+
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto 120px auto;
+    /* padding: 0 4%; */
+
+}
+/*--------------- 
+ヘッダー部 
+----------------*/
+
+.logo-img {
+    width: 100px;
+}
+.header{
+    margin-bottom: 120px;
+}
+.header-inner{
+    padding: 27px 100px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.header-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header-li {
+    font-size: 0.875rem;
+    margin-right: 30px;
+}
+.header-li:last-child{
+    margin-right: 0;
+}
+.header-link{
+    color:#000;
+    margin-right: 30px;
+}
+
+
+.header-contact{
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.875rem;
+ 
+ 
+
+
+}
+/*-----------------------------------------
+sp
+-------------------------------------------*/
+@media screen and (max-width:900px){
+
+    .wrapper {
+        margin-bottom: 70px;
+    }
+    .header-inner{
+        flex-direction: column;
+        max-width: 100%;
+        align-items: flex-start;
+        /* padding: 15px; */
+    }
+    .header-contact{
+        display: none;
+    }
+    
+}

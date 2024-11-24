@@ -1,0 +1,118 @@
+/* -----------------------------------
+ Mobile Styling
+ ----------------------------------*/
+
+ /*---- Reusable Classes -------*/
+
+ .section-title {
+    margin-bottom: 34px;
+ }
+ .jp-title {
+    margin-bottom: 24px;
+
+}
+
+ .company-logo img{
+    width: 80px;
+}
+
+ /* ---------
+  Header 
+-----------*/
+.header-inner{
+    padding: 16px 0 0 16px;
+}
+
+.header-contact {
+    display: none;
+}
+
+/*--------------------
+ Main - mainvisual 
+ --------------------*/    
+ .main-visual-img {
+
+    
+    height:  800px;
+ }
+
+/*------------- 
+Main - News 
+--------------*/
+/* .news-inner{
+    padding-left: 16px;
+} */
+.news-li {
+    margin-bottom: 40px;
+}
+.news-li:last-child{
+    margin-bottom: 90px;
+}
+/*------------- 
+Main - About 
+--------------*/
+
+.about-img img{
+    height: 300px;
+}
+.about-text-inner {
+    padding-left: 20px;
+}
+.about-inner{
+    /* padding-left: 16px; */
+    margin-bottom: 80px;
+}
+/*---------------- 
+Main - Business 
+-----------------*/
+.business-content{
+    width: 100%;
+}
+.business-inner {
+    margin-bottom: 80px;
+}
+/*------------------
+Main - Company 
+--------------------*/
+/* 文字の枠 */
+.company-content{
+    background-color: #fff;
+    padding-bottom: 20px;  /*白い部分*/
+    margin-bottom: 20px;  /*グレーの部分*/
+}
+.company-title{
+    padding-top: 40px;
+    padding-left: 20px;
+}
+.company-dt {
+    padding-left: 20px;
+    margin-bottom: 5px;
+    
+}
+.company-dd{
+    padding-left: 34px;
+    padding-bottom: 5px;
+}
+.company-dd:last-child{
+    padding-bottom: 20px ;
+    
+}
+.company-img {
+
+    width: 100%;
+    margin-bottom: 48px;
+}
+.company-img img{
+    height: 400px;
+    object-fit: cover;
+}
+/* Footer */
+.footer-content{
+    padding: 48px 0;
+}
+.footer-address{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+                                                    

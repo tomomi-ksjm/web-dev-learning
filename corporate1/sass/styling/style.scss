@@ -1,0 +1,149 @@
+@charset "UTF-8";
+$main-color : #000000;
+$bg-color : #f0f0f0;
+$bg-color2:#fff;
+$bd-color: #000;
+
+/** breakpoingを定義　**/ 
+$breakpoints: (
+    "mb": "screen and (max-width: 900px)",
+
+    ) !default;
+
+/** media queryを定義 */    
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+/** section間のmargin bottomを定義　*/
+/** parm1: mobile用, parm2: pc用*/
+@mixin section-space ($mg-mb: 70px, $mg-pc: 130px) {
+    margin-bottom: $mg-pc;
+
+    @include mq(mb) {
+        /* mobile用 */
+        margin-bottom: $mg-mb;
+
+    }
+}
+
+
+/*--- Defalut Styling ----*/
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: $main-color;
+    background-color:$bg-color;
+}
+
+ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: $main-color;
+}
+/*------------------------*/
+/*--- Reusable Classes ---*/
+/*-------------------------/
+
+/*  wrapper */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+/* section title   */
+.section-title{
+    font-weight: normal;
+     //english title // 
+    .en-title{
+        font-size: 2.25rem;
+        display: block;
+        margin-bottom: 10px;
+        letter-spacing: 10.8px;
+    
+    
+    }
+    // japanese title //
+    .jp-title{
+        font-size: 0.875rem;
+        display: block;
+    
+    }
+    // タイトルの下の線
+    &::after{
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: $main-color;
+        display: block;
+    
+    }
+
+}
+/*-----------------*/
+/*-- header -------*/
+/*-----------------*/
+.header {
+    display: flex;
+}
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 27px 0 27px 100px;
+
+}
+.company-logo{
+    width: 100px;
+    line-height: 1px;
+    @include mq(mb) {
+        /* mobile用 */
+        width:80px;
+
+    }
+}
+.header-ul{
+    display: flex;
+    gap: 30px;
+}
+
+.header-contact{
+    display: inline-block;
+    background: $main-color;
+    color: $bg-color2;
+    height: 80px;
+    width: 200px;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 33px 64px 29px 64px ;
+   
+    
+}
+
+
+
+
+
+
+
