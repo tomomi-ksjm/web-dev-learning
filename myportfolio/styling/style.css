@@ -24,6 +24,7 @@
 html {
     font-size: 100%;
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -31,6 +32,7 @@ body {
     font-family: "Mulish","Noto Sans JP", sans-serif,serif;
     font-optical-sizing: auto;
     font-style: normal;
+
 }
 
 a {
