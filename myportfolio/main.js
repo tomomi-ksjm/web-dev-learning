@@ -13,6 +13,7 @@ const navi = document.querySelector('.nav');
 const hamburger_borders = document.querySelectorAll('.hamburger_border');
 const breaksize = 768;
 
+
 // hamburger menu　をクリックしたときの処理
 hamburger.addEventListener('click',function(){
     navi.classList.toggle('nav-open');
@@ -22,6 +23,37 @@ hamburger.addEventListener('click',function(){
 
 })
 
+function closeMenu() {
+          
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        //モバイルの時だけメニューを閉じる
+    navi.classList.remove('nav-open');
+    hamburger_borders.forEach(item => {
+        item.classList.remove('nav-open');
+    })
+}
+}
+
+function closeMenuAnchorLink() {
+       // 現在のURLを取得する
+    //    const currentPathName = location.pathname;
+       const menuLinks = document.querySelectorAll('.menulink');
+
+       if (menuLinks.length == 0) return;
+
+       menuLinks.forEach((menuLink) => {
+        // const href = new URL(menuLink.href)
+        // ///同じページかつurlに’＃’が含まれている場合
+        //  if (currentPathName === href.pathname && href.hash) {
+            menuLink.addEventListener('click',() => {
+                closeMenu();
+            })
+        //  }
+       })
+
+}
+
+closeMenuAnchorLink();
 
 
 document.addEventListener('DOMContentLoaded',function(){
