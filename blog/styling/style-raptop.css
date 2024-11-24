@@ -1,0 +1,87 @@
+ /* PC用 */
+
+@media screen and (min-width:768px) {
+    .nav-li:last-child{
+        display: inline-flex;
+    }
+
+    .navi-ul{
+        justify-content: left;
+    }
+    .navi{
+        overflow-x: visible;
+    }
+    
+
+
+
+/*---- pickup -----------*/
+.article-title{
+
+    line-height: 24px;
+
+}
+
+.pickup{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 70px;
+}
+
+.pickup-article{
+    width: 32%;
+}
+
+/*-- main ---*/
+/*-- pcの時はMAINとASIDEは横並びにする　--*/
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main{
+    width: 66%;
+}
+.main article {
+    margin-bottom: 80px;
+
+}
+
+/*-- aside ---*/
+.aside{
+    margin-bottom: 140px;
+    width: 29.5%;
+ 
+}
+.aside section{
+    margin-bottom: 60px;
+}
+
+/*-- footer ---*/
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+/* -- section(about) --*/
+.about{
+    margin-top: 50px;
+    width: 32%;
+}
+/* -- section(menu) --*/
+.menu{
+    margin-top: 50px;
+    width: 32%;
+}
+/*-- section(twitter) ---*/
+.x-link{
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 32%;
+}
+
+
+    
+}
