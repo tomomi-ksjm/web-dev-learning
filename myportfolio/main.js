@@ -1,12 +1,3 @@
-// // Swiperのコア機能とナビゲーション、ページネーションモジュールをインポート
-// import Swiper from "swiper";
-// import { Navigation, Pagination } from "swiper/modules";
-
-// // コア機能と各モジュールのCSSファイルをインポート
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-
 
 const hamburger = document.querySelector('.hamburger');
 const navi = document.querySelector('.nav');
@@ -73,8 +64,8 @@ document.addEventListener('DOMContentLoaded',function(){
     //無効化するための記述
     function destroySwiper(){
         if (mySwiper) {
-            mySwiper.destroy();
-            mySwiper = undefined;
+            mySwiper.destroy(true,true);
+            mySwiper = undefined;        
         }
     }
         // if分を用いて横幅に応じて関数を実行
