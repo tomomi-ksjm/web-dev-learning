@@ -217,10 +217,10 @@ html{
 /*-swiperの無効化-*/
 /*-slideを縦並びにする-*/
 .swiper-wrapper {
-    /* display: flex; */
+    display: flex;
     transform: none;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 36px;
   }
   /*ボタンの領域を上に詰めるため高さを０にする*/
   .swiper-controller{
@@ -234,6 +234,9 @@ html{
 
   .works-inner {
     margin-bottom: 24px;
+}
+.works-img {
+   object-fit: contain;
 }
 
 /** viewmore **/

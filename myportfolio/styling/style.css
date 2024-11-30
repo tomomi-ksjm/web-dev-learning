@@ -283,7 +283,8 @@ img {
 .works-img {
     height: 200px;
     width: 304px;
-    object-fit: cover;
+    object-fit: contain;
+    /* object-fit: cover; */
     max-width: 100%;
     margin-bottom: 8px;
 }
