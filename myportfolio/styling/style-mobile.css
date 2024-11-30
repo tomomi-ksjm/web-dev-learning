@@ -235,9 +235,6 @@ html{
   .works-inner {
     margin-bottom: 24px;
 }
-.works-img {
-   object-fit: contain;
-}
 
 /** viewmore **/
 .workstext {
